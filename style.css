@@ -1,0 +1,523 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    transition: all 400ms;
+    transition-timing-function: all ease-in-out;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color: #222;
+    color: #FFF;
+}
+
+/* ---------- NAVIGATION BAR ---------- */
+
+header nav{
+    display: flex;
+}
+header nav #logo a img{
+    padding: 25px 50px;
+    position: relative;
+    z-index: 2;
+}
+header nav .nav-links{
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+    padding-right: 50px;
+    justify-content: space-between;
+}
+header nav .nav-links ul{
+    padding: 40px 0;
+}
+header nav .nav-links ul li{
+    display: inline;
+}
+header nav .nav-links ul li a{
+    color: white;
+}
+header nav .nav-links #nav-links-right ul li{
+    padding: 10px 10px;
+}
+header nav .nav-links #nav-links-right ul li a:hover{
+    color: orange;
+}
+
+/* ---------- DROPDOWN MENU ---------- */
+
+.models, .custom-solutions, .ownership, .ktm-world{
+    position: relative;
+    display: inline;
+    padding: 10px 10px;
+}
+.models:hover a, .custom-solutions:hover a,
+.ownership:hover a, .ktm-world:hover a{
+    color: orange;
+}
+.models #models-content,
+.custom-solutions #custom-solutions-content,
+.ownership #ownership-content,
+.ktm-world #ktm-world-content{
+    display: none;
+    position: fixed;
+    left: 0;
+    background-color:#222;
+    padding: 35px 0;
+    z-index: 2;
+    width: 100vw;
+}
+.models #models-content a,
+.custom-solutions #custom-solutions-content a,
+.ownership #ownership-content a,
+.ktm-world #ktm-world-content a{
+    display: block;
+    color: #999;
+    font-size: 15px;
+    line-height: 50px;
+    z-index: 2;
+}
+.models:hover #models-content,
+.custom-solutions:hover #custom-solutions-content,
+.ownership:hover #ownership-content,
+.ktm-world:hover #ktm-world-content{
+    display: block;
+}
+.models #models-content a:hover ,
+.custom-solutions #custom-solutions-content a:hover,
+.ownership #ownership-content a:hover,
+.ktm-world #ktm-world-content a:hover{
+    color: #fff;
+    font-size: 16px;
+}
+.models #models-content a{
+    margin-left: 290px;
+}
+.custom-solutions #custom-solutions-content a{
+    margin-left: 385px;
+}
+.ownership #ownership-content a{
+    margin-left: 575px;
+}
+.ktm-world #ktm-world-content a{
+    margin-left: 695px;
+}
+
+/* ---------- INNER DROPDOWN MENU ---------- */
+
+.models #models-content #travels-outer-content 
+#travels-inner-content, 
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content,
+.models #models-content #supersport-outer-content
+#supersport-inner-content,
+.models #models-content #x-bow-outer-content
+#x-bow-inner-content{
+    display: none;
+    position: fixed;
+    top: 9.5%;
+    left: 25%;
+    background-color:#222;
+    z-index: 4;
+    width: 100vw;
+}
+.models #models-content #supersport-outer-content
+#supersport-inner-content{
+    top: 14.5%;
+}
+.models #models-content #x-bow-outer-content
+#x-bow-inner-content{
+    top:25%
+}
+.models #models-content #travels-outer-content 
+#travels-inner-content a, 
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content a,
+.models #models-content #supersport-outer-content
+#supersport-inner-content a,
+.models #models-content #x-bow-outer-content
+#x-bow-inner-content a{
+    color: #fff;
+    margin: 0;
+}
+.models #models-content #travels-outer-content:hover 
+#travels-inner-content, 
+.models #models-content #naked-bike-outer-content:hover 
+#naked-bike-inner-content,
+.models #models-content #supersport-outer-content:hover
+#supersport-inner-content,
+.models #models-content #x-bow-outer-content:hover
+#x-bow-inner-content{
+    display: block;
+}
+.models #models-content #travels-outer-content 
+#travels-inner-content:hover a,
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content:hover a,
+.models #models-content #supersport-outer-content
+#supersport-inner-content:hover a,
+.models #models-content #x-bow-outer-content
+#x-bow-inner-content:hover a{
+    color: #999;
+}
+.models #models-content #travels-outer-content 
+#travels-inner-content a:hover,
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content a:hover,
+.models #models-content #supersport-outer-content
+#supersport-inner-content a:hover,
+.models #models-content #x-bow-outer-content
+#x-bow-inner-content a:hover{
+    color: #fff;
+}
+
+/* ---------- MOTORCYCLE PREVIEW MENU ---------- */
+
+.models #models-content #travels-outer-content 
+#travels-inner-content #adv390-main #adv390,
+.models #models-content #travels-outer-content 
+#travels-inner-content #adv250-main #adv250,
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content #duke390-main #duke390,
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content #duke250-main #duke250,
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content #duke200-main #duke200,
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content #duke125-main #duke125,
+.models #models-content #supersport-outer-content 
+#supersport-inner-content #rc390-main #rc390,
+.models #models-content #supersport-outer-content 
+#supersport-inner-content #rc200-main #rc200,
+.models #models-content #supersport-outer-content 
+#supersport-inner-content #rc125-main #rc125,
+.models #models-content #x-bow-outer-content 
+#x-bow-inner-content #x-bow-main #x-bow{
+    display: none;
+    position: fixed;
+    background-color:#222;
+    left: 0;
+    top: 29%;
+    width: 100vw;
+    padding-left: 520px;
+    padding-bottom: 25px;
+    z-index: -2;
+}
+
+.models #models-content #travels-outer-content 
+#travels-inner-content #adv390-main:hover #adv390,
+.models #models-content #travels-outer-content 
+#travels-inner-content #adv250-main:hover #adv250,
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content #duke390-main:hover #duke390,
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content #duke250-main:hover #duke250,
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content #duke200-main:hover #duke200,
+.models #models-content #naked-bike-outer-content 
+#naked-bike-inner-content #duke125-main:hover #duke125,
+.models #models-content #supersport-outer-content 
+#supersport-inner-content #rc390-main:hover #rc390,
+.models #models-content #supersport-outer-content 
+#supersport-inner-content #rc200-main:hover #rc200,
+.models #models-content #supersport-outer-content 
+#supersport-inner-content #rc125-main:hover #rc125,
+.models #models-content #x-bow-outer-content 
+#x-bow-inner-content #x-bow-main:hover #x-bow{
+    display: block;
+}
+
+/* ---------- MOTORCYCLE DETAILS PREVIEW TABLE ---------- */
+
+table{
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 51%; 
+    border-collapse: collapse;
+    height: 100px;
+}
+table span{
+    font-size: 25px;
+}
+td{
+    padding: 50px 50px;
+}
+h1{
+    font-size: 65px;
+    font-family: cursive;
+    line-height: 95px;
+}
+h1 span{
+   font-size: 95px;
+   color: orangered;
+}
+.models #models-content #x-bow-outer-content
+#x-bow-inner-content #x-bow-main #x-bow table{
+    position: absolute;
+    color: #fff;
+    border-collapse: collapse;
+    height: 450px;
+    left: 25%;
+    top: 0;
+}
+.models #models-content #supersport-outer-content 
+#supersport-inner-content #rc390-main:hover #rc390 table,
+.models #models-content #supersport-outer-content 
+#supersport-inner-content #rc200-main:hover #rc200 table,
+.models #models-content #supersport-outer-content 
+#supersport-inner-content #rc125-main:hover #rc125 table,
+.models #models-content #travels-outer-content
+#travels-inner-content #adv390-main:hover #adv390 table,
+.models #models-content #travels-outer-content
+#travels-inner-content #adv250-main:hover #adv250 table,
+.models #models-content #naked-bike-outer-content
+#naked-bike-inner-content #duke390-main:hover #duke390 table,
+.models #models-content #naked-bike-outer-content
+#naked-bike-inner-content #duke250-main:hover #duke250 table,
+.models #models-content #naked-bike-outer-content
+#naked-bike-inner-content #duke200-main:hover #duke200 table,
+.models #models-content #naked-bike-outer-content
+#naked-bike-inner-content #duke125-main:hover #duke125 table,
+.models #models-content #x-bow-outer-content
+#x-bow-inner-content #x-bow-main:hover #x-bow table{
+    display: block;
+}
+
+
+/* ---------- MAIN SCREEN ---------- */
+main{
+    width: 100vw;
+    height: 100vh;
+}
+            
+/* ---------- MAIN SCREEN SECTION 1 ---------- */
+
+.main-page{
+    position: relative;;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-image: url(https://azwecdnepstoragewebsiteuploads.azureedge.net/PHO_STAGE_rc8c-21-header_%23SALL_%23AEPI_%23V1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+main .main-page div{
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    top: 45%;
+    left: 5%;
+}
+main .main-page div button{
+    color: #fff;
+    background-color: #f85b26;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px 50px;
+    border: hidden;
+    border-radius: 50px;
+}
+main .main-page div button:hover{
+    color: #f85b26;
+    border: 1px solid #f85b26;
+    background: none;
+    cursor: pointer;
+}
+
+/* ---------- MAIN SCREEN SECTION 2 ---------- */
+
+main #duke-section{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-image: url(https://media.gq-magazine.co.uk/photos/5e3ec9a302e6e70008c0a800/16:9/w_2560%2Cc_limit/331116_KTM%25201290%2520SUPER%2520DUKE%2520R%2520LAUNCH%25202020.jpg);
+    background-position: center;
+    background-size: cover;
+}   
+main #duke-section #duke-btn{
+    margin-top: 150px;
+    margin-left: 75%;
+    font-family: fantasy;
+    font-size: 55px;
+    letter-spacing: 4px;
+    background-image: url(https://s7g10.scene7.com/is/image/ktm/150669_%20KTM%20390%20DUKE%20MY%202017:Medium?wid=700&hei=525&dpr=off);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 20px #fff;
+    border: hidden;
+    width: 360px;
+    height: 240px;
+    z-index: -1;
+}
+main #duke-section #duke-btn:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s7g10.scene7.com/is/image/ktm/150669_%20KTM%20390%20DUKE%20MY%202017:Medium?wid=700&hei=525&dpr=off);
+    border: 1px solid white;
+    box-shadow: none;
+    cursor: pointer;
+}
+main #duke-section #duke-btn a span{
+    color: #fff;
+}
+
+/* ---------- DUKE BLOCK MODELS ---------- */
+
+main #duke-section #duke390-block{
+    width: 360px;
+    height: 240px;
+    transform: scale(0.001,0.001);
+    background-image: url(https://azwecdnepstoragewebsiteuploads.azureedge.net/PHO_STAGE_390-duke-21-header_%23SALL_%23AEPI_%23V1.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: -240px;
+    margin-left: 5%;
+    transition: all 600ms;
+    text-align: center;
+}
+main #duke-section #duke390-block button{
+    width: 360px;
+    height: 50px;
+    font-size: 35px;
+    color:#f85b26;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: fantasy;
+    border: hidden;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+main #duke-section #duke390-block:hover button{
+    padding: 120px 0;
+}
+main #duke-section #duke250-block{
+    width: 360px;
+    height: 240px;
+    transform: scale(0.001,0.001);
+    background-image: url(https://azwecdnepstoragewebsiteuploads.azureedge.net/PHO_STAGE_250-duke-21-header_%23SALL_%23AEPI_%23V1.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: -240px;
+    margin-left: 5%;
+    transition: all 600ms;
+    text-align: center;
+}
+main #duke-section #duke250-block button{
+    width: 360px;
+    height: 50px;
+    font-size: 35px;
+    color:#f85b26;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: fantasy;
+    border: hidden; 
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+main #duke-section #duke250-block:hover button{
+    padding: 120px 0;
+}
+main #duke-section #duke200-block{
+    width: 360px;
+    height: 240px;
+    transform: scale(0.001,0.001);
+    background-image: url(https://azwecdnepstoragewebsiteuploads.azureedge.net/PHO_STAGE_200-duke-21-header_%23SALL_%23AEPI_%23V1.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: -240px;
+    margin-left: 5%;
+    transition: all 600ms;
+    text-align: center;
+}
+main #duke-section #duke200-block button{
+    width: 360px;
+    height: 50px;
+    font-size: 35px;
+    color:#f85b26;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: fantasy;
+    border: hidden; 
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+main #duke-section #duke200-block:hover button{
+    padding: 120px 0;
+}
+main #duke-section #duke125-block{
+    width: 360px;
+    height: 240px;
+    transform: scale(0.001,0.001);
+    background-image: url(https://azwecdnepstoragewebsiteuploads.azureedge.net/PHO_STAGE_125-duke-india-header_%23SALL_%23AEPI_%23V1.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: -240px;
+    margin-left: 5%;
+    transition: all 600ms;
+    text-align: center;
+}
+main #duke-section #duke125-block button{
+    width: 360px;
+    height: 50px;
+    font-size: 35px;
+    color:#f85b26;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: fantasy;
+    border: hidden; 
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+main #duke-section #duke125-block:hover button{
+    padding: 120px 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media screen and (max-width : 1380px){
+    #logo a img{
+        /* width: 120px; */
+        padding: 25px 25px;
+        transition: 600ms;
+    }
+    .nav-links ul li{
+        margin-right: 10px;
+    }
+    .nav-links{
+        padding-right: 25px;
+    }
+    .nav-links ul li a{
+        font-size: 12px;
+        transition: 600ms;
+    }
+}
+
+
+@media screen and (max-width : 1024px){
+    header nav .nav-links{
+        padding-right: 10px;
+    }
+    #logo a img{
+        width: 100px;
+        padding: 0px 0px;
+        transition: 600ms;
+    }
+    .nav-links ul li{
+        margin-right: 5px;
+    }
+    .nav-links{
+        padding-right: 15px;
+    }
+    .nav-links ul li a{
+        /* font-size: 12px; */
+        /* transition: 600ms; */
+    }
+}
